@@ -12,21 +12,21 @@ function redundant(str) {
 
 
 
-// edabit puzzle = Ping Pong! - not working
-// console.log( "Ping Pong!" );
-// console.log( pingPong(["Ping!", "Ping!", "Ping!"], true) );
+// edabit puzzle = Ping Pong! - tried to push pong onto original array but that changes the size of arr.length.  gut hung up on the math and decided to take the easy way out
+console.log( "Ping Pong!" );
+console.log( pingPong(["Ping!", "Ping!", "Ping!", "Ping!", "Ping!"], false) );
 
 
-// function pingPong( arr, win ) {
-//     for ( i = 0; i <= arr.length * 2 ; i += 2 ) {
-//         if ( arr[i] === null ) {
-//             return arr;
-//         } else {
-//             if ( win = true ) {
-//                 arr.splice( i+1, 0, 'Pong!' );
-//             }
-//         }
-//     }
-// }
+function pingPong( arr, win ) {
+    var pingPongArray = [];
+    for ( i = 0; i <= arr.length - 2 ; i ++ ) {
+        pingPongArray.push( "Ping!" )
+        pingPongArray.push( "Pong!" )
+    }
+    pingPongArray.push( "Ping!" )
+    if ( win ) {
+        pingPongArray.push( "Pong!" )
+    }
+    return pingPongArray;
+}
 
-``

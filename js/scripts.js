@@ -30,3 +30,16 @@ function pingPong( arr, win ) {
     return pingPongArray;
 }
 
+// edabit puzzle Object to Array
+console.log( "Convert Key, Values in an Object to Array" );
+
+function objectToArray(obj) {
+    var arrayFromObject = [];
+    for ( i =0; i < Object.keys( obj ).length; i++ ) {
+        arrayFromObject.push( [ Object.keys( obj )[i], Object.values( obj )[i] ] );
+    }
+    return arrayFromObject;
+}
+
+
+
